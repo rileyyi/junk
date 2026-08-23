@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Local junk removal and room clearouts in Castro Valley. Upfront pricing, quick scheduling, zero heavy lifting.">
+    <meta name="description" content="Local junk removal and room clearouts in Castro Valley. Quick quotes, easy scheduling, zero heavy lifting.">
     <title>Riley's Cleanup | Fast Local Junk Removal</title>
 
     <style>
@@ -208,51 +208,36 @@
             letter-spacing: -0.03em;
         }
 
-        /* Pricing Grid */
-        .price-table {
+        /* Process Grid */
+        .process-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        .price-col {
+        .process-step {
             background: var(--surface);
             border: 2px solid var(--border);
             border-radius: var(--radius);
-            padding: 20px;
+            padding: 24px;
         }
 
-        .price-col h3 {
-            font-size: 0.95rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
+        .step-num {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--accent);
             margin-bottom: 8px;
         }
 
-        .num {
-            font-size: 1.7rem;
-            font-weight: 900;
-            margin-bottom: 12px;
-            color: var(--accent);
+        .process-step h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 8px;
         }
 
-        .num span {
-            font-size: 0.8rem;
+        .process-step p {
+            font-size: 0.88rem;
             color: var(--muted);
-            font-weight: 600;
-        }
-
-        .desc-list {
-            list-style: none;
-            font-size: 0.85rem;
-            color: var(--muted);
-            border-top: 1px solid var(--border);
-            padding-top: 10px;
-        }
-
-        .desc-list li {
-            margin-bottom: 6px;
         }
 
         /* Photo Cards */
@@ -312,14 +297,17 @@
             .hero-split {
                 grid-template-columns: 1fr;
             }
-            .price-table, .photo-grid {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            .photo-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 600px) {
             .headline { font-size: 2.2rem; }
-            .price-table, .photo-grid { grid-template-columns: 1fr; }
+            .photo-grid { grid-template-columns: 1fr; }
             .footer-flex { flex-direction: column; gap: 8px; text-align: center; }
         }
     </style>
@@ -338,8 +326,8 @@
         <!-- Hero Split -->
         <section class="hero-split">
             <div>
-                <h1 class="headline">No fluff. Clear rates. We haul your junk.</h1>
-                <p class="subhead">Local junk removal, room clearouts, and yard waste hauling in Castro Valley. Get an exact price quote via email before we start.</p>
+                <h1 class="headline">Fast local cleanup. We haul your junk.</h1>
+                <p class="subhead">Local junk removal, room clearouts, and yard waste hauling in Castro Valley. Get a custom estimate sent to your email before we start.</p>
                 
                 <div class="hero-image-box">
                     <img src="hero-pickup-loading.jpg" alt="Junk removal truck being loaded outside house">
@@ -349,7 +337,7 @@
             <!-- Instant Form -->
             <div class="form-card" id="quote">
                 <h2>Request an Estimate</h2>
-                <p>Fill out the form below for a quick email response.</p>
+                <p>Fill out the form below for a quick email quote.</p>
 
                 <form id="quote-form" action="https://formsubmit.co/riley011235@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="New Junk Removal Quote Request">
@@ -374,10 +362,10 @@
                     <div class="field">
                         <label for="load_type">Job Size</label>
                         <select id="load_type" name="Estimated Size">
-                            <option value="Minimum Load">Minimum Load ($180 - $220)</option>
-                            <option value="Small Bedroom">1/4 Truckload ($320 - $420)</option>
-                            <option value="Living Room">1/2 Truckload ($550 - $680)</option>
-                            <option value="Full Garage / Shed">Full Truckload ($850 - $1,200)</option>
+                            <option value="Minimum Load">Minimum Load (Single item or few boxes)</option>
+                            <option value="1/4 Truckload">1/4 Truckload (Small room clearout)</option>
+                            <option value="1/2 Truckload">1/2 Truckload (Living room / multiple items)</option>
+                            <option value="Full Truckload">Full Truckload (Garage or shed)</option>
                             <option value="Custom / Unsure">Custom / Unsure</option>
                         </select>
                     </div>
@@ -393,50 +381,26 @@
             </div>
         </section>
 
-        <!-- Pricing Section -->
+        <!-- Process Section -->
         <section class="section-block">
             <div class="section-header">
-                <h2>Volume Pricing Estimates</h2>
+                <h2>How It Works</h2>
             </div>
-            <div class="price-table">
-                <div class="price-col">
-                    <h3>Minimum</h3>
-                    <div class="num">$180 <span>- $220</span></div>
-                    <ul class="desc-list">
-                        <li>1/8 truck volume</li>
-                        <li>Single item or 4-6 boxes</li>
-                        <li>Ground level pickup</li>
-                    </ul>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-num">01</div>
+                    <h3>Send Details</h3>
+                    <p>Fill out the quick request form with a brief description of the items you need cleared out.</p>
                 </div>
-
-                <div class="price-col">
-                    <h3>1/4 Truck</h3>
-                    <div class="num">$320 <span>- $420</span></div>
-                    <ul class="desc-list">
-                        <li>1/4 truck volume</li>
-                        <li>Desk, mattress, chair</li>
-                        <li>2-person loading crew</li>
-                    </ul>
+                <div class="process-step">
+                    <div class="step-num">02</div>
+                    <h3>Get Estimate</h3>
+                    <p>We review your request and email you an upfront quote based on the expected volume and labor.</p>
                 </div>
-
-                <div class="price-col">
-                    <h3>1/2 Truck</h3>
-                    <div class="num">$550 <span>- $680</span></div>
-                    <ul class="desc-list">
-                        <li>1/2 truck volume</li>
-                        <li>Sectional, dresser, bed frame</li>
-                        <li>Full room clearout labor</li>
-                    </ul>
-                </div>
-
-                <div class="price-col">
-                    <h3>Full Truck</h3>
-                    <div class="num">$850 <span>- $1,200</span></div>
-                    <ul class="desc-list">
-                        <li>Full truck capacity</li>
-                        <li>Packed garage or shed</li>
-                        <li>Complete staging & hauling</li>
-                    </ul>
+                <div class="process-step">
+                    <div class="step-num">03</div>
+                    <h3>Job Done</h3>
+                    <p>Once confirmed, we handle all the loading, hauling, and eco-friendly disposal or donation.</p>
                 </div>
             </div>
         </section>
