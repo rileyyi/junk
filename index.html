@@ -3,126 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>East Bay Junk Haul - Contact Us</title>
+    <title>East Bay Junk Haul - Fast & Reliable Local Junk Removal</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18406993300"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18406993300');
+    </script>
+
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f4f1ea;
-            color: #1e3a2b;
-            padding: 40px 20px;
-            margin: 0;
+        :root {
+            --primary: #1e3a2b;
+            --primary-hover: #2c523c;
+            --bg-color: #f4f1ea;
+            --card-bg: #ffffff;
+            --text-main: #1e3a2b;
+            --text-muted: #555555;
+            --border-color: #dcd6ce;
         }
-        .container {
-            max-width: 600px;
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .nav-container {
+            max-width: 1100px;
             margin: 0 auto;
-            background: #ffffff;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(30, 58, 43, 0.85), rgba(30, 58, 43, 0.85)), url('hero-pickup-loading.jpg') center/cover no-repeat;
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .main-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .info-section p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .service-areas {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
+
+        .service-areas h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .service-areas ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            color: var(--text-muted);
+        }
+
+        .service-areas li::before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .form-card {
+            background: var(--card-bg);
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
         }
-        h1 {
-            color: #1e3a2b;
-            margin-bottom: 10px;
+
+        .form-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: var(--primary);
         }
-        p {
-            color: #444;
-            margin-bottom: 30px;
+
+        .form-card p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
+            font-size: 0.9rem;
         }
+
         input, textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
+            padding: 12px;
+            border: 1px solid var(--border-color);
             border-radius: 6px;
             box-sizing: border-box;
             font-size: 1rem;
+            background-color: #faf9f6;
+            color: var(--text-main);
         }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: #ffffff;
+        }
+
         textarea {
             resize: vertical;
-            height: 120px;
+            height: 100px;
         }
+
         .btn {
             display: inline-block;
-            background-color: #1e3a2b;
+            background-color: var(--primary);
             color: #ffffff;
-            padding: 12px 24px;
+            padding: 14px 20px;
             border: none;
             border-radius: 6px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             width: 100%;
+            text-align: center;
+            transition: background-color 0.2s;
         }
+
         .btn:hover {
-            background-color: #2c523c;
+            background-color: var(--primary-hover);
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Get a Free Estimate</h1>
-        <p>Fill out the form below and our team will get back to you quickly with a quote for your junk removal.</p>
-        
-        <!-- Contact Form with ID for JavaScript targeting -->
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Details About Your Junk / Cleanup</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            
-            <button type="submit" class="btn">Submit Request</button>
-        </form>
-    </div>
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">EAST BAY JUNK HAUL</a>
+        </div>
+    </header>
 
-    <!-- JavaScript to handle submission and redirect to thanks.html -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fast & Reliable Local Junk Removal</h1>
+            <p>Professional cleanouts, furniture hauling, and debris disposal for your home or business.</p>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <div class="info-section">
+            <h2>Hassle-Free Cleanup Services</h2>
+            <p>Whether you're clearing out a garage, getting rid of old bulky items, or cleaning up after a renovation, our local team handles all the heavy lifting with transparent pricing and fast scheduling.</p>
+            <p>Say goodbye to the clutter and let us do the dirty work so you can reclaim your space.</p>
+            
+            <div class="service-areas">
+                <h3>Proudly Serving:</h3>
+                <ul>
+                    <li>Castro Valley</li>
+                    <li>Hayward</li>
+                    <li>Pleasanton</li>
+                    <li>San Ramon</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <h2>Get a Free Estimate</h2>
+            <p>Fill out the form below and we'll get back to you quickly with a straightforward quote.</p>
+            
+            <!-- Form configured with FormSubmit integration (replace token or action endpoint as needed) -->
+            <form id="contactForm" action="https://formsubmit.co/1b52f01b1ea07a0ebfb4db681a587f1e" method="POST">
+                <!-- Disable captcha for smooth UX -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Redirect configuration to point to thanks.html -->
+                <input type="hidden" name="_next" value="thanks.html">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(510) 555-0199">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Details About Your Junk / Cleanup</label>
+                    <textarea id="message" name="message" required placeholder="Describe what needs to be hauled away..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Request Estimate</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 East Bay Junk Haul. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript fallback script to guarantee redirection to thanks.html -->
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop the default browser submission
-            
-            const form = e.target;
-            const formData = new FormData(form);
-
-            // Optional: If you use an backend endpoint/server script, send data via fetch:
-            /*
-            fetch('/submit-form-endpoint', {
-                method: 'POST',
-                body: formData
-            }).then(response => {
-                if (response.ok) {
-                    window.location.href = 'thanks.html';
-                } else {
-                    alert('Submission failed. Please try again.');
-                }
-            }).catch(error => {
-                console.err('Error:', error);
-            });
-            */
-
-            // Direct redirect to thanks.html upon hitting submit
-            window.location.href = 'thanks.html';
+            // Allows normal form submission action flow while ensuring transition logic executes
+            setTimeout(function() {
+                window.location.href = 'thanks.html';
+            }, 500);
         });
     </script>
 
