@@ -365,7 +365,7 @@
             <!-- Instant Form -->
             <div class="form-card" id="quote">
                 <h2>Request an Estimate</h2>
-                <p>Fill out the form below for a quick email quote.</p>
+                <p>Fill out the form below for a quick quote.</p>
 
                 <form id="quote-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="5632409f-f803-4b78-9699-16fdfd754449">
@@ -380,6 +380,11 @@
                     <div class="field">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="Email" placeholder="name@example.com" required autocomplete="email">
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="Phone" placeholder="(510) 555-0199" required autocomplete="tel">
                     </div>
 
                     <div class="field">
@@ -423,7 +428,7 @@
                 <div class="process-step">
                     <div class="step-num">02</div>
                     <h3>Get Estimate</h3>
-                    <p>We review your request and email you an upfront quote based on expected volume and labor.</p>
+                    <p>We review your request and contact you with an upfront quote based on expected volume and labor.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-num">03</div>
@@ -502,7 +507,7 @@
 
                 if (response.ok) {
                     status.style.color = 'var(--accent)';
-                    status.textContent = 'Request received! We will email you shortly.';
+                    status.textContent = 'Request received! We will contact you shortly.';
                     form.reset();
                 } else {
                     throw new Error();
