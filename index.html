@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>East Bay Junk Haul - Fast & Reliable Local Junk Removal</title>
-    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18406993300"></script>
     <script>
@@ -15,15 +11,49 @@
       gtag('config', 'AW-18406993300');
     </script>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East Bay Junk Haul | Junk Removal in Castro Valley, Hayward & Pleasanton</title>
+    <meta name="description" content="Local junk removal, garage clearouts, and yard waste hauling in Castro Valley, Hayward, San Leandro, Pleasanton, and San Ramon. Upfront quotes and quick dispatch.">
+    <link rel="canonical" href="https://eastbayjunkhaul.com/">
+
+    <!-- Open Graph Social & Search Tags -->
+    <meta property="og:title" content="East Bay Junk Haul | Local Junk Removal & Clearouts">
+    <meta property="og:description" content="Fast, reliable junk removal and hauling in Castro Valley, Hayward, San Leandro, Pleasanton, and San Ramon.">
+    <meta property="og:url" content="https://eastbayjunkhaul.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://eastbayjunkhaul.com/hero-pickup-loading.jpg">
+
+    <!-- Google Structured Data / Local SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "East Bay Junk Haul",
+      "image": "https://eastbayjunkhaul.com/hero-pickup-loading.jpg",
+      "url": "https://eastbayjunkhaul.com",
+      "priceRange": "$$",
+      "description": "Professional junk removal, furniture hauling, garage clearouts, and yard debris disposal serving the East Bay and Tri-Valley region.",
+      "areaServed": [
+        { "@type": "City", "name": "Castro Valley" },
+        { "@type": "City", "name": "Hayward" },
+        { "@type": "City", "name": "San Leandro" },
+        { "@type": "City", "name": "Pleasanton" },
+        { "@type": "City", "name": "San Ramon" }
+      ]
+    }
+    </script>
+
     <style>
         :root {
-            --primary: #1e3a2b;
-            --primary-hover: #2c523c;
-            --bg-color: #f4f1ea;
-            --card-bg: #ffffff;
-            --text-main: #1e3a2b;
-            --text-muted: #555555;
-            --border-color: #dcd6ce;
+            --bg: #f4f1ea;
+            --surface: #ffffff;
+            --ink: #141414;
+            --muted: #5e5e5e;
+            --accent: #1e3a2b;
+            --accent-soft: #e8efe9;
+            --border: #141414;
+            --radius: 6px;
         }
 
         * {
@@ -33,288 +63,440 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--ink);
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
         }
 
-        header {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        .nav-container {
-            max-width: 1100px;
+        .wrapper {
+            max-width: 1120px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* Nav */
+        header {
+            border-bottom: 2px solid var(--border);
+            background: var(--surface);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--ink);
+        }
+
+        .nav-tag {
+            font-size: 0.82rem;
+            font-weight: 700;
+            background: var(--accent-soft);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--accent);
+        }
+
+        /* Split Hero */
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 440px;
+            gap: 40px;
+            padding: 48px 0;
+            align-items: start;
+        }
+
+        .headline {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin-bottom: 20px;
+        }
+
+        .subhead {
+            font-size: 1.15rem;
+            color: var(--muted);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .hero-image-box {
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: #000;
+        }
+
+        .hero-image-box img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Hero Form Card */
+        .form-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: 6px 6px 0px var(--border);
+        }
+
+        .form-card h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        .form-card p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .field {
+            margin-bottom: 14px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: #fafafa;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            background: #ffffff;
+            border-color: var(--accent);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent);
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 800;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            cursor: pointer;
+            box-shadow: 3px 3px 0px var(--border);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0px var(--border);
+        }
+
+        .btn-submit:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px var(--border);
+        }
+
+        .hidden { display: none !important; }
+
+        #form-status {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* Sections */
+        .section-block {
+            padding: 48px 0;
+            border-top: 2px solid var(--border);
+        }
+
+        .section-header {
+            margin-bottom: 28px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+        }
+
+        /* Process Grid */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .process-step {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+        }
+
+        .step-num {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            font-size: 0.88rem;
+            color: var(--muted);
+        }
+
+        /* Photo Cards */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .photo-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .photo-card-body {
+            padding: 14px;
+        }
+
+        .photo-card-body h3 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .photo-card-body p {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 2px solid var(--border);
+            background: var(--surface);
+            padding: 24px 0;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .footer-flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(30, 58, 43, 0.85), rgba(30, 58, 43, 0.85)), url('hero-pickup-loading.jpg') center/cover no-repeat;
-            color: #ffffff;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .main-container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .main-container {
+        /* Mobile */
+        @media (max-width: 900px) {
+            .hero-split {
                 grid-template-columns: 1fr;
             }
-            .hero h1 {
-                font-size: 2rem;
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        .info-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .info-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-
-        .info-section p {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-
-        .service-areas {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            margin-top: 20px;
-        }
-
-        .service-areas h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .service-areas ul {
-            list-style-type: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            color: var(--text-muted);
-        }
-
-        .service-areas li::before {
-            content: "✓ ";
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .form-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-            border: 1px solid var(--border-color);
-        }
-
-        .form-card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-            color: var(--primary);
-        }
-
-        .form-card p {
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            font-size: 0.95rem;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 1rem;
-            background-color: #faf9f6;
-            color: var(--text-main);
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            background-color: #ffffff;
-        }
-
-        textarea {
-            resize: vertical;
-            height: 100px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: #ffffff;
-            padding: 14px 20px;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            text-align: center;
-            transition: background-color 0.2s;
-        }
-
-        .btn:hover {
-            background-color: var(--primary-hover);
-        }
-
-        footer {
-            background-color: var(--card-bg);
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+        @media (max-width: 600px) {
+            .headline { font-size: 2.2rem; }
+            .photo-grid { grid-template-columns: 1fr; }
+            .footer-flex { flex-direction: column; gap: 8px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="nav-container">
-            <a href="#" class="logo">EAST BAY JUNK HAUL</a>
+        <div class="wrapper nav">
+            <a href="#" class="logo">East Bay Junk Haul</a>
+            <span class="nav-tag">East Bay & Tri-Valley</span>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Fast & Reliable Local Junk Removal</h1>
-            <p>Professional cleanouts, furniture hauling, and debris disposal for your home or business.</p>
-        </div>
-    </section>
+    <main class="wrapper">
 
-    <main class="main-container">
-        <div class="info-section">
-            <h2>Hassle-Free Cleanup Services</h2>
-            <p>Whether you're clearing out a garage, getting rid of old bulky items, or cleaning up after a renovation, our local team handles all the heavy lifting with transparent pricing and fast scheduling.</p>
-            <p>Say goodbye to the clutter and let us do the dirty work so you can reclaim your space.</p>
-            
-            <div class="service-areas">
-                <h3>Proudly Serving:</h3>
-                <ul>
-                    <li>Castro Valley</li>
-                    <li>Hayward</li>
-                    <li>Pleasanton</li>
-                    <li>San Ramon</li>
-                </ul>
+        <!-- Hero Split -->
+        <section class="hero-split">
+            <div>
+                <h1 class="headline">Fast local cleanup. We haul your junk.</h1>
+                <p class="subhead">Local junk removal, room clearouts, and yard waste hauling serving Castro Valley, Hayward, San Leandro, Pleasanton, and San Ramon. Get a custom estimate sent to your email.</p>
+                
+                <div class="hero-image-box">
+                    <img src="hero-pickup-loading.jpg" alt="Junk removal truck loading service in Castro Valley and Tri-Valley area">
+                </div>
             </div>
-        </div>
 
-        <div class="form-card">
-            <h2>Get a Free Estimate</h2>
-            <p>Fill out the form below and we'll get back to you quickly with a straightforward quote.</p>
-            
-            <!-- Form configured with FormSubmit integration (replace token or action endpoint as needed) -->
-            <form id="contactForm" action="https://formsubmit.co/1b52f01b1ea07a0ebfb4db681a587f1e" method="POST">
-                <!-- Disable captcha for smooth UX -->
-                <input type="hidden" name="_captcha" value="false">
-                <!-- Redirect configuration to point to thanks.html -->
-                <input type="hidden" name="_next" value="thanks.html">
+            <!-- Instant Form -->
+            <div class="form-card" id="quote">
+                <h2>Request an Estimate</h2>
+                <p>Fill out the form below for a quick quote.</p>
 
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                <form id="quote-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="5632409f-f803-4b78-9699-16fdfd754449">
+                    <input type="hidden" name="subject" value="New Junk Removal Quote Request">
+                    <!-- Redirects user to thanks.html after successful submission -->
+                    <input type="hidden" name="redirect" value="https://eastbayjunkhaul.com/thanks.html">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Name" placeholder="Your name" required autocomplete="name">
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="Email" placeholder="name@example.com" required autocomplete="email">
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="Phone" placeholder="(510) 555-0199" required autocomplete="tel">
+                    </div>
+
+                    <div class="field">
+                        <label for="city">City / Area</label>
+                        <input type="text" id="city" name="City" placeholder="Castro Valley, Pleasanton, etc." required>
+                    </div>
+
+                    <div class="field">
+                        <label for="load_type">Job Size</label>
+                        <select id="load_type" name="Estimated Size">
+                            <option value="Minimum Load">Minimum Load (Single item or few boxes)</option>
+                            <option value="1/4 Truckload">1/4 Truckload (Small room clearout)</option>
+                            <option value="1/2 Truckload">1/2 Truckload (Living room / multiple items)</option>
+                            <option value="Full Truckload">Full Truckload (Garage or shed)</option>
+                            <option value="Custom / Unsure">Custom / Unsure</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="details">Items to Remove</label>
+                        <textarea id="details" name="Job Details" rows="3" placeholder="E.g. Couch, mattress, 6 storage bins" required></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn-submit">Send Request</button>
+                    <div id="form-status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section-block">
+            <div class="section-header">
+                <h2>How It Works</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-num">01</div>
+                    <h3>Send Details</h3>
+                    <p>Fill out the quick request form with a brief description of the items you need cleared out.</p>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                <div class="process-step">
+                    <div class="step-num">02</div>
+                    <h3>Get Estimate</h3>
+                    <p>We review your request and contact you with an upfront quote based on expected volume and labor.</p>
                 </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="(510) 555-0199">
+                <div class="process-step">
+                    <div class="step-num">03</div>
+                    <h3>Job Done</h3>
+                    <p>Once confirmed, we handle all the loading, hauling, and eco-friendly disposal or donation.</p>
                 </div>
-                
-                <div class="form-group">
-                    <label for="message">Details About Your Junk / Cleanup</label>
-                    <textarea id="message" name="message" required placeholder="Describe what needs to be hauled away..."></textarea>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section-block">
+            <div class="section-header">
+                <h2>Services</h2>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="service-garage.jpg" alt="Organized garage clearout in Castro Valley">
+                    <div class="photo-card-body">
+                        <h3>Garages & Sheds</h3>
+                        <p>Old tools, boxes, and bulk junk cleared out.</p>
+                    </div>
                 </div>
-                
-                <button type="submit" class="btn">Request Estimate</button>
-            </form>
-        </div>
+
+                <div class="photo-card">
+                    <img src="service-furniture.jpg" alt="Furniture hauling service Hayward">
+                    <div class="photo-card-body">
+                        <h3>Furniture & Heavy Items</h3>
+                        <p>Couches, mattresses, and bulky items carried out.</p>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="service-yard.jpg" alt="Yard waste cleanup Pleasanton">
+                    <div class="photo-card-body">
+                        <h3>Yard Debris</h3>
+                        <p>Branches, outdoor scrap, and green waste hauled off.</p>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="service-house.jpg" alt="House cleanout interior San Ramon">
+                    <div class="photo-card-body">
+                        <h3>House Cleanouts</h3>
+                        <p>Estate clearouts and pre-move property cleanup.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 East Bay Junk Haul. All rights reserved.</p>
+        <div class="wrapper footer-flex">
+            <p><strong>East Bay Junk Haul</strong> | Serving Castro Valley, Hayward, San Leandro, Pleasanton, and San Ramon.</p>
+            <p>Estimates handled directly via web form.</p>
+        </div>
     </footer>
-
-    <!-- JavaScript fallback script to guarantee redirection to thanks.html -->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            // Allows normal form submission action flow while ensuring transition logic executes
-            setTimeout(function() {
-                window.location.href = 'thanks.html';
-            }, 500);
-        });
-    </script>
-
 </body>
 </html>
